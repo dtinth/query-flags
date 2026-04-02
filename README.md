@@ -5,10 +5,10 @@ The `query-flags` package provides a simple way to enable/disable features based
 ## Usage
 
 ```ts
-import { isQueryFlagEnabled } from 'query-flags'
+import { isQueryFlagEnabled } from "query-flags";
 
 // Enable the feature by adding `?flags=my-feature` to the URL.
-if (isQueryFlagEnabled('my-feature')) {
+if (isQueryFlagEnabled("my-feature")) {
   // Do something.
 }
 ```

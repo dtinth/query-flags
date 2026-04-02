@@ -5,7 +5,7 @@
  * @packageDocumentation
  */
 
-let flagSet: Set<string> | undefined
+let flagSet: Set<string> | undefined;
 
 /**
  * Returns true if the flag is enabled in the query string.
@@ -17,12 +17,12 @@ let flagSet: Set<string> | undefined
 export function isQueryFlagEnabled(flagName: string) {
   if (!flagSet) {
     const flags =
-      typeof window !== 'undefined'
-        ? new URLSearchParams(window.location.search).get('flags') || ''
-        : ''
-    flagSet = new Set(flags.split(',').filter(Boolean))
+      typeof window !== "undefined"
+        ? new URLSearchParams(window.location.search).get("flags") || ""
+        : "";
+    flagSet = new Set(flags.split(",").filter(Boolean));
   }
-  return flagSet.has(flagName)
+  return flagSet.has(flagName);
 }
 
 /**
@@ -30,5 +30,5 @@ export function isQueryFlagEnabled(flagName: string) {
  * @beta
  */
 export function dangerouslyInjectQueryFlags(flags: string[]) {
-  flagSet = new Set(flags)
+  flagSet = new Set(flags);
 }
