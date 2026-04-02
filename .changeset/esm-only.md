@@ -2,4 +2,4 @@
 "query-flags": major
 ---
 
-Public API release
+This package is now ESM-only
